@@ -11,30 +11,7 @@
   </div>
 </div>
 <div class="main_content">
-  <div class="content">
-    <div class="upper_content">
-      <div class="chat_user">tom
-      </div>
-      <div class="chat_time">2020/12/21
-      </div>
-    </div>
-    <div class="bottom_content">
-      <div class="chat_text">hello
-      </div>
-    </div>
-  </div>
-  <div class="content">
-    <div class="upper_content">
-      <div class="chat_user">tom2
-      </div>
-      <div class="chat_time">2020/12/21
-      </div>
-    </div>
-    <div class="bottom_content">
-      <div class="chat_text">hello
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
